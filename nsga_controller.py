@@ -1,7 +1,6 @@
 """
 traffic_signal_nsga2.py
 =======================
-Multi-objective traffic signal timing optimizer for a 4-phase intersection.
 Uses NSGA-II (via pymoo) to minimize average delay, queue length, CO2 emissions,
 and maximize throughput (modelled as minimization of negative throughput).
 
@@ -53,21 +52,6 @@ def run_sumo(green_times: np.ndarray) -> Tuple[float, float, float, float]:
     co2         : float  — total CO2 emitted       (mg)
     throughput  : float  — vehicles that completed their trip
 
-    Notes
-    -----
-    Replace the placeholder body with your actual SUMO integration, e.g.:
-
-        import traci
-        traci.start([...])
-        traci.trafficlight.setPhase("junction_id", 0)
-        # apply green_times to each phase ...
-        traci.simulationStep() × N
-        delay        = traci.edge.getWaitingTime(...) / n_vehicles
-        queue_length = ...
-        co2          = traci.edge.getCO2Emission(...)
-        throughput   = traci.simulation.getArrivedNumber()
-        traci.close()
-        return delay, queue_length, co2, throughput
     """
     g1, g2, g3, g4 = green_times          # unpack for clarity
 
