@@ -1,0 +1,11 @@
+<edges>
+    <edge id="n2c" from="north" to="center"/>
+    <edge id="s2c" from="south" to="center"/>
+    <edge id="e2c" from="east" to="center"/>
+    <edge id="w2c" from="west" to="center"/>
+
+    <edge id="c2n" from="center" to="north"/>
+    <edge id="c2s" from="center" to="south"/>
+    <edge id="c2e" from="center" to="east"/>
+    <edge id="c2w" from="center" to="west"/>
+</edges>
