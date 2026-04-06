@@ -1,0 +1,20 @@
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" length="5" maxSpeed="13.9"/>
+
+    <route id="r1" edges="n2c c2s"/>
+    <route id="r2" edges="s2c c2n"/>
+    <route id="r3" edges="e2c c2w"/>
+    <route id="r4" edges="w2c c2e"/>
+
+    <!-- LOW TRAFFIC -->
+    <flow id="low1" route="r1" begin="0" end="500" number="40"/>
+    <flow id="low2" route="r2" begin="0" end="500" number="40"/>
+    <flow id="low3" route="r3" begin="0" end="500" number="40"/>
+    <flow id="low4" route="r4" begin="0" end="500" number="40"/>
+
+    <!-- HIGH TRAFFIC SURGE -->
+    <flow id="high1" route="r1" begin="500" end="1000" number="100"/>
+    <flow id="high2" route="r2" begin="500" end="1000" number="100"/>
+    <flow id="high3" route="r3" begin="500" end="1000" number="100"/>
+    <flow id="high4" route="r4" begin="500" end="1000" number="100"/>
+</routes>
